@@ -10,7 +10,7 @@ async function init() {
 }
 //This Method Get Data
 async function readData() {
-  const response = await fetch("./question.json");
+  const response = await fetch("https://opentdb.com/api.php?amount=4");
   const obj = await response.json(response);
   const results = await obj.results;
   return results
